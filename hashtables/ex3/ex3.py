@@ -4,7 +4,20 @@ def intersection(arrays):
     YOUR CODE HERE
     """
 
-    return result
+    d = {}
+    for array in arrays:
+        for val in array:
+            if val not in d:
+                d[val] = False
+            else:
+                d[val] = val
+
+    final = []
+    for boolean in d.values():
+        if boolean:
+            final.append(boolean)
+
+    return final
 
 
 if __name__ == "__main__":
